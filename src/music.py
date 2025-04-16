@@ -28,6 +28,7 @@ def descargar_musica(url, carpeta="Descargas"):
                 'preferredquality': '160',
         }],
             'ffmpeg_location': '/usr/bin/ffmpeg',
+            'cookiefile': './cookies.txt',  # Ruta al archivo de cookies
         }
         with yt_dlp.YoutubeDL(opciones) as ydl:
             #ydl.download([url])
@@ -42,4 +43,5 @@ def descargar_musica(url, carpeta="Descargas"):
 if __name__ == "__main__":
     music_url = input("Ingresa la url del video: ")
     descargar_musica(music_url)
+
 
