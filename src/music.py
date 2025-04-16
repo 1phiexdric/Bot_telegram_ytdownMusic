@@ -2,15 +2,6 @@ import os
 
 import yt_dlp
 
-import shutil
-
-def get_ffmpeg_path():
-    """
-    This function returns the path of the ffmpeg executable if it is installed, otherwise it returns None.
-    """
-    return shutil.which('ffmpeg')
-ffmpeg_ruta = get_ffmpeg_path()
-
 
 def descargar_musica(url, carpeta="Descargas"):
 
@@ -36,7 +27,7 @@ def descargar_musica(url, carpeta="Descargas"):
                 'preferredcodec': 'mp3',
                 'preferredquality': '160',
         }],
-            'ffmpeg_location': ffmpeg_ruta,
+            'ffmpeg_location': '/usr/bin/ffmpeg',
         }
         with yt_dlp.YoutubeDL(opciones) as ydl:
             #ydl.download([url])
