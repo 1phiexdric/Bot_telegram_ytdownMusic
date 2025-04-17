@@ -24,7 +24,7 @@ def send_help(message):
 @bot.message_handler(content_types=['text'])
 def download(message):
     try:
-        if message.text.startswith("https://youtu"):
+        if message.text.startswith("https://youtu", "https://music.yout"):
             msg = bot.reply_to(message, "Descargando..." \
             "\nEsto puede tardar un poco, por favor espera.")
             
