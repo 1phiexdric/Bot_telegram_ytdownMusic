@@ -27,7 +27,7 @@ def descargar_musica(url, carpeta="Descargas"):
                 'preferredcodec': 'mp3',
                 'preferredquality': '160',
         }],
-            'ffmpeg_location': '/data/data/com.termux/files/usr/bin/ffmpeg',
+            'ffmpeg_location': '/usr/bin/ffmpeg',
             'cookiefile': './cookies.txt',  # Ruta al archivo de cookies
         }
         with yt_dlp.YoutubeDL(opciones) as ydl:
